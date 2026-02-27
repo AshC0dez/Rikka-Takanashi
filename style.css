@@ -1,0 +1,50 @@
+body{
+    font-family: Arial, sans-serif;
+    color: rgb(245, 215, 198);
+    background-color: #111111;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header, footer{
+    background-color: #222222;
+    padding: 8px;
+}
+.gallery img{
+    width: 230px;
+    margin: 8px;
+    border: 8px solid #4B0082;
+    border-radius: 4px;
+}
+.gallery img:hover{
+    border-color: #1E90FF;
+
+}
+video{
+    width: 620px;
+    margin: 20px auto;
+    border: 8px solid #4B0082;
+    border-radius: 8px;
+}
+.about{
+    margin: 80px auto;
+    background-color: #222222;
+    padding: 8px;
+}
+.rikka-landscape{
+    width: 600px;
+    margin: 20px;
+    border: 8px solid #4B0082;
+    border-radius: 8px;
+}
+.rikka{
+    width: 100px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: width 0.3s ease;
+}
+.rikka:hover{
+    width: 125px;
+    transition: width 0.3s ease;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rikka!</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Rikka Takanashi</h1>
+            <h3>The Tyrant's Eye</h3>
+        </header>
+        <nav>
+            <h2>Love, Chunibyo & Other Delusions!</h2>
+        </nav>
+        <img class="rikka-landscape" src="images/rikka_landscape1.jpg" alt="Rikka not found.">
+        <section>
+            <audio id="rikkaSound" src="images/rikka.mp3"></audio>
+            <audio id="rikkaSoundow" src="images/rikka-ow.mp3"></audio>
+            <img  class="rikka" src="images/rikka_Takanashi_Transparent.webp" alt="Rikka not found.">
+        </section>
+        <section class="about">
+            <h2>About Rikka</h2>
+            <P>
+                Rikka Takanashi is one of the main characters in 
+                Love, Chunibyo & Other Delusions. She believes she possesses
+                the "Tyrant's Eye" and lives in her own fantasy world.
+            </P>
+        </section>
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <div class="Gallery">
+                <img src="images/rikka1x1.jpg" alt="Rikka not found.">
+                <img src="images/rikka1x1-1.jpg" alt="Rikka not found.">
+                <img src="images/rikka1x1-2.jpg" alt="Rikka not found.">
+            </div>
+        </section>
+        <video width="320px" controls>
+            <source src="images/gameplay.webm" type="video/mp4">
+        </video>
+        <footer>
+            <p>Fan-made website - Created by Antonio, Third Rion Rivera</p>
+        </footer>
+    </body>
+    <script>
+        const galleryImages = document.querySelectorAll(".Gallery img");
+        const owSound = document.getElementById("rikkaSoundow");
+        const rikkaImage = document.querySelector(".rikka");
+        const rikkaSound = document.getElementById("rikkaSound");
+
+        rikkaImage.addEventListener("click", function() {
+        rikkaSound.currentTime = 0;
+        rikkaSound.play();
+        });
+
+        galleryImages.forEach(function(img) {
+            img.addEventListener("click", function() {
+
+                const originalSrc = img.src;
+
+                owSound.currentTime = 0;
+                owSound.play();
+
+                img.src = "images/rikka1x1-ow.jpg";
+
+                setTimeout(function() {
+                    img.src = originalSrc;
+                }, 500);
+
+            });
+        });
+    </script>
+</html>
